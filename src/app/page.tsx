@@ -135,7 +135,7 @@ export default function Home() {
                     <div className="space-y-3">
                         <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
                             <span>📧</span>
-                            <span>delichicharronespr@gmail.com</span>
+                            <span>eatcommerce@gmail.com</span>
                         </div>
                         <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
                             <span>📱</span>

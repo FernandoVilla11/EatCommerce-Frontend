@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Delichicharron",
-    description: "A crunchy restaurant",
+    title: "EatCommerce",
+    description: "Online Shopping - Fast Delivery",
 };
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {

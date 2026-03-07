@@ -1,7 +1,7 @@
 // Centralized app configuration
 // Reads API base URL from the environment with a sensible default for local/dev
 
-export const API_BASE_URL = "https://fast-food-back-uh35.onrender.com";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
 //process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "")
 export const ENDPOINTS = {
     products: `${API_BASE_URL}/products`,

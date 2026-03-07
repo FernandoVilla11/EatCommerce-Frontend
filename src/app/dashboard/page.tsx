@@ -105,7 +105,7 @@ export default function PageDashboard() {
                         {greeting}, {firstName}
                     </h1>
                     <p className="text-sm md:text-base opacity-90">
-                        Bienvenido al sistema DeliChicharrones.
+                        Bienvenido al sistema EatCommerce.
                     </p>
                 </div>
                 <div className="relative z-10 flex flex-col items-start md:items-end gap-2">

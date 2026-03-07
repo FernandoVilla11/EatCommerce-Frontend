@@ -95,7 +95,7 @@ export default function LoginPage() {
                         />
                     </div>
                     <CardTitle className="text-2xl font-extrabold text-[#F4511E] tracking-tight">
-                        FastFoodControl
+                        EatCommerce
                     </CardTitle>
                     <CardDescription className="text-center text-sm">
                         Inicia sesión para gestionar tu punto de venta
