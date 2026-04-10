@@ -41,11 +41,30 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* ── Eatcommerce Brand Tokens ── */
+  --color-brand-light-bg:      var(--brand-light-bg);
+  --color-brand-dark-bg:       var(--brand-dark-bg);
+  --color-brand-dark-bg-soft:  var(--brand-dark-bg-soft);
+  --color-brand-input:         var(--brand-input);
+  --color-brand-accent:        var(--brand-accent);
+  --color-brand-accent-alt:    var(--brand-accent-alt);
+  --color-brand-green-dark:    var(--brand-green-dark);
+  --color-brand-green-mid:     var(--brand-green-mid);
+  --color-brand-green-light:   var(--brand-green-light);
+  --color-brand-blue:          var(--brand-blue);
+  --color-brand-cream:         var(--brand-cream);
+  --color-brand-cream-soft:    var(--brand-cream-soft);
+  --color-brand-text-light:    var(--brand-text-light);
+  --color-brand-text-dark:     var(--brand-text-dark);
+  --color-brand-border:        var(--brand-border);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+
+  /* ── shadcn/ui base tokens ── */
+  --background: oklch(54.356% 0.07364 19.688);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -66,8 +85,8 @@
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.28 0.189 84.429);
+  --chart-5: oklch(36.283% 0.05952 75.238);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -76,10 +95,44 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* ────────────────────────────────────────
+     Eatcommerce Brand Palette
+     Fuente: Selection Colors extraídos de Figma
+     ──────────────────────────────────────── */
+
+  /* Fondos */
+  --brand-light-bg:      #D5BA98;              /* Crema/arena — fondo principal */
+  --brand-dark-bg:       #101828;              /* Azul muy oscuro — fondo oscuro principal */
+  --brand-dark-bg-soft:  rgba(16,24,40,0.50);  /* Fondo oscuro al 50% */
+
+  /* Cards e inputs */
+  --brand-input:         rgba(213,186,152,0.60); /* Crema 60% — inputs y cards */
+  --brand-border:        rgba(213,186,152,0.30); /* Crema 30% — bordes sutiles */
+
+  /* Acentos / CTA */
+  --brand-accent:        #FF6655;   /* Rojo coral — botón primario, CTA */
+  --brand-accent-alt:    #F44336;   /* Rojo alternativo */
+
+  /* Verdes de marca */
+  --brand-green-dark:    #044505;   /* Verde muy oscuro */
+  --brand-green-mid:     #117908;   /* Verde medio */
+  --brand-green-light:   #286006;   /* Verde claro */
+
+  /* Azul */
+  --brand-blue:          #155DFC;   /* Azul vivo */
+
+  /* Cremas */
+  --brand-cream:         #D5BA98;              /* Crema pura */
+  --brand-cream-soft:    rgba(213,186,152,0.60); /* Crema suave */
+
+  /* Textos */
+  --brand-text-light:    #FFFFFF;   /* Texto sobre fondos oscuros */
+  --brand-text-dark:     #000000;   /* Texto sobre fondos claros */
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(55.978% 0.06499 19.261);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -99,7 +152,7 @@
   --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-3: oklch(76.9% 0.17337 64.355 / 0.435);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
@@ -110,6 +163,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Brand palette invertida para dark mode */
+  --brand-light-bg:      #101828;
+  --brand-dark-bg:       #D5BA98;
+  --brand-dark-bg-soft:  rgba(213,186,152,0.50);
+  --brand-input:         rgba(16,24,40,0.60);
+  --brand-border:        rgba(16,24,40,0.30);
+  --brand-text-light:    #000000;
+  --brand-text-dark:     #FFFFFF;
 }
 
 @layer base {

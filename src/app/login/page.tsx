@@ -75,10 +75,9 @@ export default function LoginPage() {
         <div
             className="min-h-screen w-full flex items-center justify-center p-4"
             style={{
-                backgroundColor: "#F5D547",
+                backgroundColor: "#a6aebf",
                 backgroundImage: `
-          linear-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.6) 1px, transparent 1px)
+
         `,
                 backgroundSize: "60px 60px",
             }}

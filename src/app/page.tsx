@@ -21,7 +21,7 @@ export default function Home() {
             y: 0,
             title: 'Inicio',
             content: (
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-2xl max-w-md">
+                <div className="bg-gray-50 rounded-xl p-6 shadow-2xl max-w-md text-black">
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">¡Bienvenido!</h2>
                     <p className="text-gray-600 mb-4">
                         Aquí encontrarás los chicharrones más crujientes y sabrosos, preparados como en casa. <br />
@@ -42,7 +42,7 @@ export default function Home() {
             y: -460,
             title: 'Sobre Mí',
             content: (
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 shadow-2xl max-w-md text-white">
+                <div className="bg-gradient-to-br from-[#101828] to-[#FFFFFF] rounded-xl p-6 shadow-2xl max-w-md text-black">
                     <h2 className="text-3xl font-bold mb-4">👋 Sobre Nosotros</h2>
                     <p className="mb-4">
                         Nuestra historia comenzó en casa, con mamá perfeccionando la receta familiar de chicharrones que ahora queremos compartir contigo. <br />
@@ -56,6 +56,8 @@ export default function Home() {
                             height={300}
                             className='rounded-md object-cover'
                         />
+                
+
                     </div>
                 </div>
             )
@@ -67,7 +69,7 @@ export default function Home() {
             y: -200,
             title: 'Redes Sociales',
             content: (
-                <div className="bg-gray-900 rounded-xl p-6 shadow-2xl max-w-md text-white">
+                <div className="bg-[#101828] rounded-xl p-6 shadow-2xl max-w-md text-white">
                     <h2 className="text-2xl font-bold mb-4">📱 Síguenos</h2>
                     <div className="space-y-3">
                         <a href="#" className="flex items-center gap-3 bg-blue-600 rounded-lg p-3 hover:bg-blue-700 transition-colors">
@@ -100,7 +102,7 @@ export default function Home() {
             y: 400,
             title: 'Proyectos',
             content: (
-                <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl p-6 shadow-2xl max-w-md text-white">
+                <div className="bg-gradient-to-br from-[#101828] to-[#00897B] rounded-xl p-6 shadow-2xl max-w-md text-white">
                     <h2 className="text-3xl font-bold mb-4">🍴 Menú</h2>
                     <div className="space-y-4">
                         <div className="bg-white/20 rounded-lg p-4">
@@ -130,26 +132,30 @@ export default function Home() {
             y: 200,
             title: 'Contacto',
             content: (
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 shadow-2xl max-w-md text-white">
-                    <h2 className="text-3xl font-bold mb-4">📬 Contacto</h2>
-                    <div className="space-y-3">
-                        <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
-                            <span>📧</span>
-                            <span>eatcommerce@gmail.com</span>
-                        </div>
-                        <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
-                            <span>📱</span>
-                            <span>+57 (323) 479-8248</span>
-                        </div>
-                        <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
-                            <span>📍</span>
-                            <span>Planeta Rica, Córdoba, Colombia</span>
-                        </div>
-                    </div>
-                    <button className="w-full bg-white text-orange-500 font-bold py-3 rounded-lg mt-4 hover:bg-gray-100 transition-colors">
-                        Enviar Mensaje
-                    </button>
-                </div>
+<div className="bg-gradient-to-br from-[#101828] to-[#FFFFFF] rounded-xl p-6 shadow-2xl max-w-md text-black selection:bg-red-500 selection:text-white">
+    <h2 className="text-3xl font-bold mb-4">📬 Contacto</h2>
+
+    <div className="space-y-3">
+        <div className="flex items-center gap-3 bg-black/10 rounded-lg p-3">
+            <span>📧</span>
+            <span>eatcommerce@gmail.com</span>
+        </div>
+
+        <div className="flex items-center gap-3 bg-black/10 rounded-lg p-3">
+            <span>📱</span>
+            <span>+57 (323) 479-xxx</span>
+        </div>
+
+        <div className="flex items-center gap-3 bg-black/10 rounded-lg p-3">
+            <span>📍</span>
+            <span>Medellin, Antioquia, Colombia</span>
+        </div>
+    </div>
+
+    <button className="w-full bg-red-500 text-white font-bold py-3 rounded-lg mt-4 hover:bg-red-600 transition-colors">
+        Enviar Mensaje
+    </button>
+</div>
             )
         },
         {
@@ -159,7 +165,7 @@ export default function Home() {
             y: 500,
             title: 'Habilidades',
             content: (
-                <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl p-6 shadow-2xl max-w-md text-white">
+                <div className="bg-gradient-to-br from-[#101828] to-[#FFFFFF] rounded-xl p-6 shadow-2xl max-w-md text-white">
                     <h2 className="text-3xl font-bold mb-4">✍ Receta</h2>
                     <div className="space-y-3">
                         <div className="bg-white/20 rounded-lg p-3">
@@ -313,13 +319,15 @@ export default function Home() {
     return (
         <div
             ref={containerRef}
-            className={`font-sans min-h-screen relative bg-gradient-to-br from-amber-300 to-amber-300 overflow-hidden select-none ${
+            className={`font-sans min-h-screen relative bg-gradient-to-br from-[#8A6642] to-[#C2A27A] overflow-hidden select-none ${
                 isDragging ? 'cursor-grabbing' : 'cursor-grab'
+                
             }`}
             onMouseDown={handleReactMouseDown}
             onTouchStart={handleReactTouchStart}
             style={{ touchAction: 'none' }}
         >
+            
             {/* Fondo animado con grid */}
             <div
                 className="absolute inset-0 opacity-20"
@@ -350,6 +358,13 @@ export default function Home() {
                         {element.content}
                     </div>
                 ))}
+                <Image
+                    src="/logo2.png"
+                    alt="logo2"
+                    fill
+                    className="object-contain opacity-10 pointer-events-none absolute z-0 scale-50 top-20 right-20"
+                />
+
             </div>
 
             <Navbar/>
