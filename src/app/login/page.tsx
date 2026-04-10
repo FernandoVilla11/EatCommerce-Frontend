@@ -75,20 +75,11 @@ export default function LoginPage() {
         <div
             className="min-h-screen w-full flex items-center justify-center p-4"
             style={{
-<<<<<<< HEAD
-                backgroundColor: "#e5e7eb",
-                backgroundImage: `
-                    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)
-                `,
-                backgroundSize: "40px 40px",
-=======
                 backgroundColor: "#a6aebf",
                 backgroundImage: `
 
         `,
                 backgroundSize: "60px 60px",
->>>>>>> 99937f2a1272bb036dd4bc189559ad25019f6579
             }}
         >
             <Card className="w-full max-w-sm rounded-3xl shadow-xl border-0 bg-white">

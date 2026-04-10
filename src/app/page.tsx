@@ -162,10 +162,6 @@ export default function Home() {
             type: 'projects',
             x: 300,
             y: 400,
-<<<<<<< HEAD
-            title: 'Menú',
-            content: <MenuSection />
-=======
             title: 'Proyectos',
             content: (
                 <div className="bg-gradient-to-br from-[#101828] to-[#00897B] rounded-xl p-6 shadow-2xl max-w-md text-white">
@@ -190,7 +186,6 @@ export default function Home() {
                     </div>
                 </div>
             )
->>>>>>> 99937f2a1272bb036dd4bc189559ad25019f6579
         },
         {
             id: 'contact',
@@ -199,28 +194,6 @@ export default function Home() {
             y: 200,
             title: 'Contacto',
             content: (
-<<<<<<< HEAD
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 shadow-2xl max-w-md text-white">
-                    <h2 className="text-3xl font-bold mb-4">📬 Contacto</h2>
-                    <div className="space-y-3">
-                        <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
-                            <span>📧</span>
-                            <span>eatcommerce@gmail.com</span>
-                        </div>
-                        <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
-                            <span>📱</span>
-                            <span>+57 (323) 000-8248</span>
-                        </div>
-                        <div className="flex items-center gap-3 bg-white/20 rounded-lg p-3">
-                            <span>📍</span>
-                            <span>Medellín, Antioquia, Colombia</span>
-                        </div>
-                    </div>
-                    <button className="w-full bg-white text-orange-500 font-bold py-3 rounded-lg mt-4 hover:bg-gray-100 transition-colors">
-                        Enviar Mensaje
-                    </button>
-                </div>
-=======
 <div className="bg-gradient-to-br from-[#101828] to-[#FFFFFF] rounded-xl p-6 shadow-2xl max-w-md text-black selection:bg-red-500 selection:text-white">
     <h2 className="text-3xl font-bold mb-4">📬 Contacto</h2>
 
@@ -245,7 +218,6 @@ export default function Home() {
         Enviar Mensaje
     </button>
 </div>
->>>>>>> 99937f2a1272bb036dd4bc189559ad25019f6579
             )
         },
         {
@@ -397,11 +369,8 @@ export default function Home() {
             onTouchStart={handleReactTouchStart}
             style={{ touchAction: 'none' }}
         >
-<<<<<<< HEAD
-=======
             
             {/* Fondo animado con grid */}
->>>>>>> 99937f2a1272bb036dd4bc189559ad25019f6579
             <div
                 className="absolute inset-0 opacity-20"
                 style={{
