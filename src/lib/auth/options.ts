@@ -14,6 +14,11 @@ type LoginResponse = {
 };
 
 async function loginOnBackend(credentials: { userName: string; password: string }) {
+    // AGREGA ESTO PARA DEBUGUEAR:
+    console.log(">>> LLAMANDO AL BACKEND EN:", `${API_BASE}/auth/login`);
+    console.log(">>> BODY ENVIADO:", JSON.stringify(credentials));
+
+
     const res = await fetch(`${API_BASE}/auth/login`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -26,7 +31,10 @@ async function loginOnBackend(credentials: { userName: string; password: string 
     }
 
     return (await res.json()) as LoginResponse;
+
+    
 }
+
 
 export const authOptions: NextAuthOptions = {
     session: {strategy: "jwt"},
