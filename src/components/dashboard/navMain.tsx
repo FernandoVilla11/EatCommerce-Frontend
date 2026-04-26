@@ -40,7 +40,7 @@ export function NavMain({
                                         tooltip={item.title}
                                         className={
                                             active
-                                                ? "bg-[#FB8C00] text-primary-foreground font-bold hover:bg-[#FB8C00] hover:text-primary-foreground active:bg-[#FB8C00] active:text-primary-foreground"
+                                                ? "bg-[#101828] text-primary-foreground font-bold hover:bg-[#101828] hover:text-primary-foreground active:bg-[#101828] active:text-primary-foreground"
                                                 : "text-foreground font-bold hover:bg-primary/10 hover:text-foreground active:bg-primary/20"
                                         }
                                         aria-current={active ? "page" : undefined}

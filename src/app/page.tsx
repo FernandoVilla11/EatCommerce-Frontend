@@ -100,27 +100,138 @@ export default function Home() {
             type: 'projects',
             x: 300,
             y: 400,
-            title: 'Proyectos',
+            title: 'Menú',
             content: (
                 <div className="bg-gradient-to-br from-[#101828] to-[#00897B] rounded-xl p-6 shadow-2xl max-w-md text-white">
                     <h2 className="text-3xl font-bold mb-4">🍴 Menú</h2>
-                    <div className="space-y-4">
-                        <div className="bg-white/20 rounded-lg p-4">
-                            <h3 className="font-bold text-lg">App E-commerce</h3>
-                            <p className="text-sm opacity-90 mb-2">Plataforma completa con React y Node.js</p>
-                            <div className="flex gap-2">
-                                <span className="bg-white/30 px-2 py-1 rounded text-xs">React</span>
-                                <span className="bg-white/30 px-2 py-1 rounded text-xs">Node.js</span>
+                    
+                    <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                        
+                        {/* --- PLATOS FUERTES Y ENTRADAS --- */}
+                        <div className="bg-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/bandejaPaisa.png" alt="Bandeja Paisa" width={90} height={90} className="rounded-lg object-cover shadow-md w-[90px] h-[90px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-lg">Bandeja Paisa</h3>
+                                <p className="text-xs opacity-90 mb-2">Frijoles, carne molida, huevo, arroz, arepa y chicharrón.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-white/30 px-2 py-1 rounded text-[10px]">Especialidad</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$35.000</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="bg-white/20 rounded-lg p-4">
-                            <h3 className="font-bold text-lg">Dashboard Analytics</h3>
-                            <p className="text-sm opacity-90 mb-2">Visualización de datos en tiempo real</p>
-                            <div className="flex gap-2">
-                                <span className="bg-white/30 px-2 py-1 rounded text-xs">Vue.js</span>
-                                <span className="bg-white/30 px-2 py-1 rounded text-xs">D3.js</span>
+
+                        <div className="bg-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/carne.png" alt="Carne Asada" width={90} height={90} className="rounded-lg object-cover shadow-md w-[90px] h-[90px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-lg">Carne Asada</h3>
+                                <p className="text-xs opacity-90 mb-2">Jugosa carne a la parrilla con arepa, papas y ensalada.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-white/30 px-2 py-1 rounded text-[10px]">A la parrilla</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$28.000</span>
+                                </div>
                             </div>
                         </div>
+
+                        <div className="bg-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/sancocho.png" alt="Sancocho" width={90} height={90} className="rounded-lg object-cover shadow-md w-[90px] h-[90px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-lg">Sancocho de Gallina</h3>
+                                <p className="text-xs opacity-90 mb-2">Sopa tradicional con gallina, plátano, yuca, papa y arroz.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-white/30 px-2 py-1 rounded text-[10px]">Sopas</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$30.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/ajiaco.png" alt="Ajiaco" width={90} height={90} className="rounded-lg object-cover shadow-md w-[90px] h-[90px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-lg">Ajiaco Santafereño</h3>
+                                <p className="text-xs opacity-90 mb-2">Sopa espesa con 3 tipos de papa, pollo desmechado y guascas.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-white/30 px-2 py-1 rounded text-[10px]">Recomendado</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$32.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/empanadas.png" alt="Empanadas" width={90} height={90} className="rounded-lg object-cover shadow-md w-[90px] h-[90px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-lg">Porción de Empanadas</h3>
+                                <p className="text-xs opacity-90 mb-2">5 deliciosas empanadas crujientes de carne y papa, con ají.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-white/30 px-2 py-1 rounded text-[10px]">Entradas</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$12.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* --- SEPARADOR DE BEBIDAS --- */}
+                        <div className="py-2">
+                            <div className="flex items-center gap-2">
+                                <div className="h-px bg-white/30 flex-1"></div>
+                                <span className="text-sm font-bold opacity-80 uppercase tracking-wider">Bebidas</span>
+                                <div className="h-px bg-white/30 flex-1"></div>
+                            </div>
+                        </div>
+
+                        {/* --- BEBIDA 1: Limonada de Coco --- */}
+                        <div className="bg-white/10 border border-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/limonada-coco.png" alt="Limonada de Coco" width={70} height={70} className="rounded-lg object-cover shadow-md w-[70px] h-[70px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-md">Limonada de Coco</h3>
+                                <p className="text-xs opacity-90 mb-2">Refrescante y cremosa, preparada con crema de coco natural.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-blue-500/30 px-2 py-1 rounded text-[10px]">Refrescante</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$9.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* --- BEBIDA 2: Jugo de Lulo --- */}
+                        <div className="bg-white/10 border border-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/jugo-lulo.png" alt="Jugo de Lulo" width={70} height={70} className="rounded-lg object-cover shadow-md w-[70px] h-[70px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-md">Jugo de Lulo</h3>
+                                <p className="text-xs opacity-90 mb-2">Jugo natural en agua o en leche, con el toque cítrico perfecto.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-orange-500/30 px-2 py-1 rounded text-[10px]">Natural</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$7.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* --- BEBIDA 3: Cerveza --- */}
+                        <div className="bg-white/10 border border-white/20 rounded-lg p-4 flex gap-4 items-center">
+                            <div className="flex-shrink-0">
+                                <Image src="/cerveza.png" alt="Cerveza Nacional" width={70} height={70} className="rounded-lg object-cover shadow-md w-[70px] h-[70px]" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-md">Cerveza Nacional</h3>
+                                <p className="text-xs opacity-90 mb-2">Cerveza bien fría. Pregunta por nuestras marcas disponibles.</p>
+                                <div className="flex gap-2">
+                                    <span className="bg-amber-500/30 px-2 py-1 rounded text-[10px]">Licores</span>
+                                    <span className="bg-[#101828] text-emerald-400 px-2 py-1 rounded text-[10px] font-bold">$6.000</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             )

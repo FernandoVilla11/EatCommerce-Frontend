@@ -7,6 +7,7 @@ import {
     IconListDetails,
     IconReportMoney,
     IconChartBar,
+    IconTruck, // <-- 1. Agregamos el icono del camión aquí
 } from "@tabler/icons-react"
 import type {Role} from "@/lib/auth/types"
 
@@ -23,6 +24,7 @@ export const navMain: NavItem[] = [
     {title: "Productos", url: "/dashboard/products", icon: IconListDetails, roles: ["ADMIN"]},
     {title: "Gastos", url: "/dashboard/expenses", icon: IconReportMoney, roles: ["ADMIN"]},
     {title: "Reportes", url: "/dashboard/reports", icon: IconChartBar, roles: ["ADMIN"]},
+    {title: "Proveedores", url: "/dashboard/suppliers", icon: IconTruck, roles: ["ADMIN"]}, // <-- 2. Aquí está tu nueva ruta
     {title: "Usuarios", url: "/dashboard/users", icon: IconUsers, roles: ["ADMIN"]},
 ]
 
