@@ -27,6 +27,25 @@ export const purchasesApi = {
         return res.json();
     },
 
+    update: async (id: number, data: Partial<PurchaseDTO>): Promise<PurchaseDTO> => {
+        const res = await fetch(`${getBaseUrl()}/api/purchases/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+            cache: 'no-store',
+        });
+        if (!res.ok) throw new Error('Error al actualizar compra');
+        return res.json();
+    },
+
+    remove: async (id: number): Promise<void> => {
+        const res = await fetch(`${getBaseUrl()}/api/purchases/${id}`, {
+            method: 'DELETE',
+            cache: 'no-store',
+        });
+        if (!res.ok) throw new Error('Error al eliminar compra');
+    },
+
     getReport: async (supplierId: string, start: string, end: string): Promise<PurchaseReportDTO> => {
         const res = await fetch(
             `${getBaseUrl()}/api/purchases/report?supplierId=${supplierId}&start=${start}&end=${end}`,

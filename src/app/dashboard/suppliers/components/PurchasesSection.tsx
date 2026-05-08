@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { usePurchases } from '../hooks/usePurchases';
 import CreatePurchaseModal from './CreatePurchaseModal';
+import EditPurchaseModal from './EditPurchaseModal';
+import DeletePurchaseModal from './DeletePurchaseModal';
+import { PurchaseDTO } from '../types';
 
 interface Props {
     supplierId: string;
@@ -13,6 +16,8 @@ export default function PurchasesSection({ supplierId, supplierName }: Props) {
     const { purchases, loading, refetch } = usePurchases();
     const [expandedId, setExpandedId] = useState<string | null>(null);
     const [isCreateOpen, setCreateOpen] = useState(false);
+    const [purchaseToEdit, setPurchaseToEdit] = useState<PurchaseDTO | null>(null);
+    const [purchaseToDelete, setPurchaseToDelete] = useState<PurchaseDTO | null>(null);
 
     const supplierPurchases = purchases.filter(
         (p) => String(p.supplierId) === supplierId
@@ -49,7 +54,7 @@ export default function PurchasesSection({ supplierId, supplierName }: Props) {
                             return (
                                 <div key={purchaseKey} className="p-4 hover:bg-white/5 transition-all">
                                     <div
-                                        className="flex justify-between items-center cursor-pointer"
+                                        className="flex justify-between items-start cursor-pointer"
                                         onClick={() => setExpandedId(isExpanded ? null : purchaseKey)}
                                     >
                                         <div>
@@ -72,9 +77,23 @@ export default function PurchasesSection({ supplierId, supplierName }: Props) {
                                                 {purchase.status}
                                             </span>
                                         </div>
-                                        <span className="text-xs text-gray-400">
-                                            {isExpanded ? '▲ Cerrar' : '▼ Ver productos'}
-                                        </span>
+                                        <div className="flex items-center gap-3 ml-4">
+                                            <button
+                                                onClick={(e) => { e.stopPropagation(); setPurchaseToEdit(purchase); }}
+                                                className="text-xs text-blue-400 hover:text-blue-300 transition"
+                                            >
+                                                Editar
+                                            </button>
+                                            <button
+                                                onClick={(e) => { e.stopPropagation(); setPurchaseToDelete(purchase); }}
+                                                className="text-xs text-red-400 hover:text-red-300 transition"
+                                            >
+                                                Eliminar
+                                            </button>
+                                            <span className="text-xs text-gray-400">
+                                                {isExpanded ? '▲' : '▼'}
+                                            </span>
+                                        </div>
                                     </div>
 
                                     {isExpanded && items.length > 0 && (
@@ -113,6 +132,20 @@ export default function PurchasesSection({ supplierId, supplierName }: Props) {
                 onSuccess={refetch}
                 supplierId={Number(supplierId)}
                 supplierName={supplierName}
+            />
+
+            <EditPurchaseModal
+                isOpen={!!purchaseToEdit}
+                onClose={() => setPurchaseToEdit(null)}
+                onSuccess={() => { refetch(); setPurchaseToEdit(null); }}
+                purchase={purchaseToEdit}
+            />
+
+            <DeletePurchaseModal
+                isOpen={!!purchaseToDelete}
+                onClose={() => setPurchaseToDelete(null)}
+                onSuccess={() => { refetch(); setPurchaseToDelete(null); }}
+                purchase={purchaseToDelete}
             />
         </>
     );
