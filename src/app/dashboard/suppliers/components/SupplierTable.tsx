@@ -32,7 +32,7 @@ export default function SupplierTable({ suppliers, onEdit, onDelete, onSelectPur
                 </td>
                 <td className="p-4 text-sm">{s.address}</td>
                 <td className="p-4 flex justify-center gap-3">
-                  <button onClick={() => onSelectPurchases(s.id)} className="text-blue-400 hover:text-blue-300 text-sm">Compras</button>
+                  <button onClick={() => onSelectPurchases(String(s.id))} className="text-blue-400 hover:text-blue-300 text-sm">Compras</button>
                   <button onClick={() => onEdit(s)} className="text-emerald-400 hover:text-emerald-300 text-sm">Editar</button>
                   <button onClick={() => onDelete(s)} className="text-red-400 hover:text-red-300 text-sm">Eliminar</button>
                 </td>

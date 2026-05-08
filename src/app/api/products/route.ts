@@ -1,8 +1,30 @@
-import {NextResponse} from "next/server";
-import {ENDPOINTS} from "@/lib/config";
-import {ensureRole} from "@/lib/auth/rbac";
-import {handleApiError} from "@/lib/api/route-utils";
-import {getServerAuthSession} from "@/lib/auth/auth";
+import { NextResponse } from "next/server";
+import { ENDPOINTS, SERVER_ENDPOINTS } from "@/lib/config";
+import { ensureRole } from "@/lib/auth/rbac";
+import { handleApiError } from "@/lib/api/route-utils";
+import { getServerAuthSession } from "@/lib/auth/auth";
+import { httpBackend } from "@/lib/api/http-backend";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth/options";
+
+export async function GET() {
+    try {
+        const session = await getServerSession(authOptions);
+        if (!session) {
+            return NextResponse.json({ message: "No autenticado" }, { status: 401 });
+        }
+
+        const list = await httpBackend<any[]>(
+            SERVER_ENDPOINTS.products,
+            "/get-all-products",
+            { method: "GET" }
+        );
+        return NextResponse.json(list, { status: 200 });
+    } catch (e: any) {
+        console.error("GET /api/products error:", e?.message);
+        return handleApiError(e);
+    }
+}
 
 export async function POST(req: Request) {
     try {
@@ -17,11 +39,10 @@ export async function POST(req: Request) {
 
         const form = await req.formData();
 
-        // Reenvía multipart al backend usando el accessToken de NextAuth
         const backendRes = await fetch(`${ENDPOINTS.products}/create-product`, {
             method: "POST",
             body: form,
-            headers: {Authorization: `Bearer ${session.accessToken}`},
+            headers: { Authorization: `Bearer ${session.accessToken}` },
             cache: "no-store",
         });
 
@@ -34,7 +55,7 @@ export async function POST(req: Request) {
             throw err;
         }
 
-        return NextResponse.json(data, {status: 201});
+        return NextResponse.json(data, { status: 201 });
     } catch (e) {
         return handleApiError(e);
     }
